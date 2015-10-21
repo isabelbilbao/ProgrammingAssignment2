@@ -3,12 +3,20 @@
 
 ## Write a short comment describing this function
 
+  #These functions provide the base mechanisms for defining new functions in the R language.
+  #Usage:
+  #function( arglist ) expr
+  #return(value)
+  
+
 makeCacheMatrix <- function (x = matrix()) {
   inv <- NULL
   set <- function (y) {
     x <<- y
     inv <<- NULL
   }
+  
+
   get <- function() x
   setinverse <- function (inverse) inv <<- inverse
   getinverse <- function () inv
